@@ -1,0 +1,58 @@
+.container{
+    border:3px solid black;
+    font-family: 'Montserrat', sans-serif;
+    margin:30px auto;
+    width:80%;
+    
+}
+
+h1,h2{
+    text-align: center;
+    font-weight: 700;
+}
+
+#button_group{
+    display: flex;
+    flex-wrap: upwrap;
+    
+    justify-content: space-evenly;  
+    
+    padding-bottom: 30px;
+}
+
+button{
+    margin:15px 25px;
+    padding:20px;
+    width: 60%;
+}
+
+button:hover{
+    background-color:rgb(212, 149, 31);
+}
+
+#story-output{
+    font-size: 4.5rem;
+    padding:20px 30px;
+}
+
+#button_group{
+    margin:20px auto;
+    text-align: center;
+}
+
+button #create-story{
+    text-align: center;
+    margin:20px auto;
+}
+
+#story_output{
+    margin:0 auto 30px;
+    text-align: center;
+    width: 80%;
+    
+}
+
+#story_input{
+    text-align: center;
+    margin:40px auto 0;
+}

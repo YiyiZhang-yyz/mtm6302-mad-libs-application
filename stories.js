@@ -45,3 +45,46 @@ const stories = [
     }
   }
 ]
+  
+// for (let word of stories[0].words){
+// }
+const storyInput = document.querySelector('#story_input');
+const storyOutput = document.querySelector('#story_output');
+
+const buttons = document.querySelectorAll('.story_btn');
+
+
+for (let [index, button] of buttons.entries()) {
+  button.addEventListener('click', () => {
+    storyOutput.innerHTML = '';
+    let inputs = '';
+    const words = stories[index].words;
+
+    for (let word of words) {
+      inputs += `<div><input type="text" name='${word}' placeholder='${word}'/></div>`;
+    }
+
+
+    inputs += `<button id='readBtn'>Read Story</button>`;
+    
+    storyInput.innerHTML = inputs;
+    const readBtn = document.querySelector('#readBtn');
+
+
+    readBtn.addEventListener('click', () => readStory(index));
+  });
+}
+
+var readStory = (index) => {
+  
+  const inputWords = document.querySelectorAll('#story_input input');
+  const words = {};
+
+
+  for (let input of inputWords) {
+    words[input.name] = input.value;
+  }
+
+  output = words;
+  storyOutput.innerHTML = stories[index].output(output);
+};
